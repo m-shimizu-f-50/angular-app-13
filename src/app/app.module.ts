@@ -7,6 +7,7 @@ import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { NotFoundComponent } from './pages/not-found/not-found.component';
+import { UsersComponent } from './pages/users/users.component';
 
 @NgModule({
   declarations: [
@@ -15,6 +16,7 @@ import { NotFoundComponent } from './pages/not-found/not-found.component';
     HomeComponent,
     FooterComponent,
     NotFoundComponent,
+    UsersComponent,
   ],
   imports: [BrowserModule, AppRoutingModule],
   providers: [],
