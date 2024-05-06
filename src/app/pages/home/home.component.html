@@ -1,1 +1,17 @@
-<p>home works!</p>
+<div class="text-center mt-5">
+  <h2 class="text-2xl font-bold">実装一覧</h2>
+
+  <div *ngFor="let implementation of implementations">
+    <div
+      [routerLink]="[implementation.path]"
+      class="w-3/4 m-auto my-5 flex border-2 rounded-lg border-gray-400 border-opacity-30 p-8 bg-white cursor-pointer hover:bg-gray-200"
+    >
+      <div class="w-full text-left">
+        <h2 class="text-xl font-bold title-font font-medium mb-3">
+          実装名：{{ implementation.title }}
+        </h2>
+        <p class="">内容：{{ implementation.content }}</p>
+      </div>
+    </div>
+  </div>
+</div>
