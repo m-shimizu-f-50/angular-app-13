@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { HomeComponent } from './pages/home/home.component';
 import { FooterComponent } from './components/footer/footer.component';
+import { NotFoundComponent } from './pages/not-found/not-found.component';
 
 // ルーティング設定
 const routes: Routes = [
@@ -18,11 +19,17 @@ const routes: Routes = [
   //   path: 'todo/add',
   //   component: TodoAddComponent,
   // },
-  // { path: '**', component: NotFoundComponent },
+  { path: '**', component: NotFoundComponent },
 ];
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, HomeComponent, FooterComponent],
+  declarations: [
+    AppComponent,
+    HeaderComponent,
+    HomeComponent,
+    FooterComponent,
+    NotFoundComponent,
+  ],
   imports: [BrowserModule, RouterModule.forRoot(routes)],
   providers: [],
   bootstrap: [AppComponent],
