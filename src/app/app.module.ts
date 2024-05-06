@@ -1,16 +1,30 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
+import { HeaderComponent } from './components/header/header.component';
+import { HomeComponent } from './pages/home/home.component';
+import { FooterComponent } from './components/footer/footer.component';
+
+// ルーティング設定
+const routes: Routes = [
+  { path: '', component: HomeComponent },
+  // {
+  //   path: 'todos',
+  //   component: TodoListComponent,
+  // },
+  // {
+  //   path: 'todo/add',
+  //   component: TodoAddComponent,
+  // },
+  // { path: '**', component: NotFoundComponent },
+];
 
 @NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule
-  ],
+  declarations: [AppComponent, HeaderComponent, HomeComponent, FooterComponent],
+  imports: [BrowserModule, RouterModule.forRoot(routes)],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
