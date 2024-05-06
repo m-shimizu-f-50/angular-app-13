@@ -17,7 +17,7 @@ export class HomeComponent implements OnInit {
     {
       title: 'ユーザー一覧',
       content: 'ユーザー一覧情報をAPIで取得し、表示する機能',
-      path: '/user',
+      path: '/users',
     },
   ];
 
